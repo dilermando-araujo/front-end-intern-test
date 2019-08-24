@@ -55,12 +55,13 @@ h1 {
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
-    width: 300px;
-    height: 50px;
+    width: 100%;
+    height: 60px;
 }
 
 /* Inputs */
 .input {
+    font-family: 'Open Sans';
     width: 100%;
     border-style: none;
     height: 50px;
@@ -71,5 +72,20 @@ h1 {
 }
 
 .input:focus {
+    outline: none;
+}
+
+.textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 25px;
+    resize: none;
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+.textarea:focus {
     outline: none;
 }
