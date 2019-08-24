@@ -7,21 +7,26 @@
 body {
     margin: 0;
     padding: 0;
-    background: url("./assets/04-BG.png");
+    background: url("./assets/04-BG.png") no-repeat center center fixed;
     background-size: cover;
 }
 
 nav {
-    height: 75px;
+    background-color: #ABD0B6;
     width: 100%;
-    background-color: #ACD0B4;
+    height: 10%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
 }
 
-nav .nav-logo {
-    display: inline-block;
-    position: relative;
+.container-form {
+    position: absolute;
     top: 50%;
     left: 50%;
+    background-color: white;
     transform: translate(-50%, -50%);
 }
 
@@ -29,4 +34,21 @@ h1 {
     font-family: 'Cookie', cursive;
     font-size: 71px;
     color: purple;
+}
+
+
+/* Button Style */
+.btn {
+    background-color: #71A397;
+    color: white;
+    border-radius: 8px;
+    border-style: none none solid;
+    border-color: #4C8979;
+    border-width: 10px;
+    font-family: 'Open Sans';
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 300px;
+    height: 50px;
 }
