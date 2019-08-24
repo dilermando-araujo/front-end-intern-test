@@ -26,7 +26,7 @@
     }
     if (messageLength == 0) {
       inputsEmptyText += " mensagem"
-      inputsEmpty = ["message", ...inputsEmpty];
+      inputsEmpty     = ["message", ...inputsEmpty];
     }
 
     if (inputsEmptyText.length == 0)
@@ -35,14 +35,24 @@
     }
     else
     {
+      e.preventDefault(); // Para não permitir o envio do formulário.
+      
       // Para remover a virgula no final da string se existir.
       if (inputsEmptyText.charAt(inputsEmptyText.length - 1) == ","){
         inputsEmptyText = inputsEmptyText.substr(0, (inputsEmptyText.length - 1));
       }
 
       window.alert(`Infelizmente não será possível, pois não é permitido campo(s) vazio(s):${inputsEmptyText}`);
-    
+      
+      // Troca o placeholder dos inputs que estão faltando.
+      inputsEmpty.map(id => {
+        let element = document.getElementById(id);
+
+        element.classList.add("error");
+        element.placeholder = "Este campo é obrigatório!"
+      })
     }
 
   });
+
 })();

@@ -53,6 +53,10 @@ h1 {
     outline: none;
 }
 
+.error::placeholder {
+    color: #ff7675;
+}
+
 /* Button Style */
 .btn {
     background-color: #71A397;
