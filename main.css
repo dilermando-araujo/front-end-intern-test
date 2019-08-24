@@ -26,14 +26,20 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: white;
+    width: 420px;
     transform: translate(-50%, -50%);
+}
+
+.container-title h1 {
+    text-align: center;
+    font-weight: normal;
+    line-height: 50px;
 }
 
 h1 {
     font-family: 'Cookie', cursive;
     font-size: 71px;
-    color: purple;
+    color: white;
 }
 
 
