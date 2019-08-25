@@ -4,6 +4,10 @@
 /* font-family: 'Open Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
+*:focus {
+    outline: none;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,19 +16,21 @@ body {
     background-size: cover;
 }
 
-nav {
+header {
+    position: fixed;
     background-color: #ABD0B6;
     width: 100%;
     height: 10%;
     min-height: 60px;
-    position: fixed;
+    
     display: flex;
     flex-direction: row;
     justify-content: center; 
     align-items: center;
+    z-index: 999;
 }
 
-.container-form {
+.login-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,25 +38,41 @@ nav {
     transform: translate(-50%, -50%);
 }
 
-.container-title h1 {
-    text-align: center;
+.login-box h1 {
+    color: #E3ECCD;
+    font-family: 'Cookie', cursive;
+    font-size: 71px;
     font-weight: normal;
+    text-align: center;
     line-height: 50px;
 }
 
-.contant-form {
+.login-box form {
     position: relative;
     top: -15px;
 }
 
-h1 {
-    font-family: 'Cookie', cursive;
-    font-size: 71px;
-    color: #E3ECCD;
+.login-box input[type=text],
+.login-box textarea
+{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    border-style: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
 }
 
-*:focus {
-    outline: none;
+.login-box input[type=text]::placeholder,
+.login-box textarea::placeholder
+{
+    font-weight: lighter;
+}
+
+.login-box input[type=text] {
+    height: 50px;
+    padding: 20px;
 }
 
 .error::placeholder {
@@ -77,58 +99,56 @@ h1 {
     cursor: pointer;
 }
 
-/* Inputs */
-.input {
-    font-family: 'Open Sans';
-    width: 100%;
-    border-style: none;
-    height: 50px;
-    font-size: 18px;
-    padding: 20px;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.input-margin {
-    margin-bottom: 25px;
+.input::placeholder {
+    font-weight: lighter;
 }
 
 .textarea {
-    width: 100%;
     height: 150px;
-    border-radius: 5px;
-    box-sizing: border-box;
     padding: 12px 20px 0px;
     resize: none;
-    font-family: 'Open Sans';
-    font-size: 18px;
-    border-style: none;
+}
+
+.textarea::placeholder {
+    font-weight: lighter;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .container-form {
+    
+    .login-box {
         width: 85%;
     }
-    .input-margin {
-        margin-bottom: 10px;
-    }
-    .container-title h1 {
+
+    .login-box h1 {
         font-size: 45px;
         line-height: 35px;
     }
-    .input {
+
+    .login-box input[type=text],
+    .login-box textarea 
+    {
+        margin-bottom: 10px;
+    }
+
+    .login-box input[type=text]
+    {
         padding: 2px 15px 0px;
         height: 40px;
     }
-    .input:nth-child(1)
+
+    .login-box input[type=text]:nth-child(1)
     {
         margin-top: 10px;
     }
-    .textarea {
+
+    .login-box textarea 
+    {
         padding: 5px 15px 0px;
         height: 100px;
     }
+
     .btn {
         height: 50px;
     }
+
 }

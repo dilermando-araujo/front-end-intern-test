@@ -49,7 +49,7 @@
         let element = document.getElementById(id);
 
         element.classList.add("error");
-        element.placeholder = "Este campo é obrigatório!"
+        element.placeholder = `O campo "${element.placeholder}" é obrigatório!`;
       })
     }
 
