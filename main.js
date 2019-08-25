@@ -48,8 +48,14 @@
       inputsEmpty.map(id => {
         let element = document.getElementById(id);
 
-        element.classList.add("error");
-        element.placeholder = `O campo "${element.placeholder}" é obrigatório!`;
+        // Para verificar se o placeholder daquele campo não já foi mudado 
+        // (caso ele tente enviar vazio de novo).
+        if (element.placeholder.indexOf("é obrigatório!") == -1) // -1, ele não achou nossa mensagem de erro. 
+        {
+          element.classList.add("input-required");
+          element.placeholder = `O campo "${element.placeholder}" é obrigatório!`;
+        }
+
       })
     }
 

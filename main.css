@@ -75,46 +75,37 @@ header {
     padding: 20px;
 }
 
-.error::placeholder {
-    color: #ff7675;
-}
-
-/* Button Style */
-.btn {
-    background-color: #71A397;
-    color: white;
-    border-radius: 5px;
-    border-style: none none solid;
-    border-color: #4C8979;
-    border-width: 10px;
-    font-family: 'Open Sans';
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 100%;
-    height: 60px;
-}
-
-.btn:hover {
-    cursor: pointer;
-}
-
-.input::placeholder {
-    font-weight: lighter;
-}
-
-.textarea {
+.login-box textarea {
     height: 150px;
     padding: 12px 20px 0px;
     resize: none;
 }
 
-.textarea::placeholder {
-    font-weight: lighter;
+.login-box input[type=submit] {
+    background-color: #71A397;
+    color: white;
+    width: 100%;
+    height: 60px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 5px;
+    border-style: none none solid;
+    border-color: #4C8979;
+    border-width: 10px;
+    text-transform: uppercase;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    
+.login-box input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.login-box .input-required::placeholder {
+    color: #ff7675;
+}
+
+@media (min-width: 320px) and (max-width: 480px)
+{    
     .login-box {
         width: 85%;
     }
@@ -130,25 +121,21 @@ header {
         margin-bottom: 10px;
     }
 
-    .login-box input[type=text]
-    {
+    .login-box input[type=text] {
         padding: 2px 15px 0px;
         height: 40px;
     }
 
-    .login-box input[type=text]:nth-child(1)
-    {
+    .login-box input[type=text]:nth-child(1) {
         margin-top: 10px;
     }
 
-    .login-box textarea 
-    {
+    .login-box textarea {
         padding: 5px 15px 0px;
         height: 100px;
     }
 
-    .btn {
+    .login-box input[type=submit] {
         height: 50px;
     }
-
 }
